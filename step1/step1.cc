@@ -852,7 +852,11 @@ void step1::Loop(TString inTreeName, TString outTreeName )
       isoSF = 1.0;
       std::vector<std::string> eltriggersX;
       std::vector<std::string> mutriggersX;
-      if(Year==2017){
+      if(Year==2016){
+	//No cross triggers in 2016 AN
+	continue;
+      }
+      else if(Year==2017){
       eltriggersX = {"Ele15_IsoVVVL_PFHT450","Ele50_IsoVVVL_PFHT450","Ele15_IsoVVVL_PFHT600","Ele35_WPTight_Gsf","Ele38_WPTight_Gsf"};
       mutriggersX = {"Mu15_IsoVVVL_PFHT450","Mu50_IsoVVVL_PFHT450","Mu15_IsoVVVL_PFHT600","Mu50"};
       }
@@ -862,30 +866,47 @@ void step1::Loop(TString inTreeName, TString outTreeName )
       }
       std::string eltrigger;
       std::string mutrigger;
+      std::string mutrigger2; 
       std::string hadtrigger;
       std::vector<std::string> eltriggers;
       std::vector<std::string> mutriggers;
       std::vector<std::string> hadtriggers;
       std::map<TString, std::vector<std::string>> mctriggers;
-      mctriggers = {{"17B", {"Ele35_WPTight_Gsf", "IsoMu24_eta2p1" , "PFHT380_SixPFJet32_DoublePFBTagDeepCSV_2p2" }},
+      mctriggers = {{"16BCDEF",{"Ele32_eta2p1_WPTight_Gsf", "IsoMu24", "IsoTkMu24"}}, // No had trigger in 2016 AN
+		    {"16GH",{"Ele32_eta2p1_WPTight_Gsf", "IsoMu24", "IsoTkMu24"}},  //No had trigger in 2016 AN
+		    {"17B", {"Ele35_WPTight_Gsf", "IsoMu24_eta2p1" , "PFHT380_SixPFJet32_DoublePFBTagDeepCSV_2p2" }},
 		    {"17C",{"Ele35_WPTight_Gsf", "IsoMu27" , "PFHT380_SixPFJet32_DoublePFBTagCSV_2p2" }},
 		    {"17DEF",{"Ele32_WPTight_Gsf", "IsoMu27" , "PFHT380_SixPFJet32_DoublePFBTagDeepCSV_2p2" }},
 		    {"18",{"Ele32_WPTight_Gsf", "IsoMu24" , "PFHT400_SixPFJet32_DoublePFBTagDeep_CSV_2p94" }}};
 
 
       std::map<TString, std::vector<std::string>> datatriggers;
-      datatriggers = {{"17B", {"Ele35_WPTight_Gsf", "IsoMu24_eta2p1" , "PFHT380_SixJet32_DoubleBTagCSV_p075" }},
+      datatriggers = {{"16BCDEF",{"Ele32_eta2p1_WPTight_Gsf", "IsoMu24", "IsoTkMu24"}}, // No had trigger in 2016 AN
+		      {"16GH",{"Ele32_eta2p1_WPTight_Gsf", "IsoMu24", "IsoTkMu24"}}, // No had trigger in 2016 AN
+		      {"17B", {"Ele35_WPTight_Gsf", "IsoMu24_eta2p1" , "PFHT380_SixJet32_DoubleBTagCSV_p075" }},
 		      {"17C",{"Ele35_WPTight_Gsf", "IsoMu27" , "PFHT380_SixPFJet32_DoublePFBTagCSV_2p2" }},
 		      {"17DEF",{"Ele32_WPTight_Gsf", "IsoMu27" , "PFHT380_SixPFJet32_DoublePFBTagDeepCSV_2p2" }},
 		      {"18AB", {"Ele32_WPTight_Gsf", "IsoMu24" , "PFHT380_SixPFJet32_DoublePFBTagDeep_CSV_2p2" }},
 		      {"18CD",{"Ele32_WPTight_Gsf", "IsoMu24" , "PFHT400_SixPFJet32_DoublePFBTagDeep_CSV_2p94" }}};
       if (!isMC){
+	if (Year==2016){
+	  eltrigger = datatriggers.at(Era).at(0);
+          mutrigger = datatriggers.at(Era).at(1);
+          mutrigger2 = datatriggers.at(Era).at(2);
+	}
+	else{
 	eltrigger = datatriggers.at(Era).at(0);
 	mutrigger =  datatriggers.at(Era).at(1);
 	hadtrigger = datatriggers.at(Era).at(2);
+	}
       }
       else{
-	if (Year==2017){
+	if (Year==2016){
+	  eltrigger = mctriggers.at(Era).at(0);
+	  mutrigger = mctriggers.at(Era).at(1);
+	  mutrigger2 = mctriggers.at(Era).at(2);
+	}
+	else if (Year==2017){
 	  TRandom3 r;
 	  //TRandom3 *r = new TRandom3();
 	  float randLumi = r.Uniform(1.);    
@@ -930,12 +951,14 @@ void step1::Loop(TString inTreeName, TString outTreeName )
           EGammaGsfSF = hardcodedConditions.GetEGammaGsfSF(leppt, lepeta, Year);
           lepIdSF = hardcodedConditions.GetElectronIdSF(leppt, lepeta, Year);
           isoSF = hardcodedConditions.GetElectronIsoSF(leppt, lepeta, Year);
-          triggerSF = hardcodedConditions.GetElectronTriggerSF(leppt, AK4HT, Year);
+	  if(Year==2016){triggerSF = hardcodedConditions.GetElectronTriggerSF(leppt, lepeta, Year);}
+          else{triggerSF = hardcodedConditions.GetElectronTriggerSF(leppt, AK4HT, Year);}
           triggerXSF = hardcodedConditions.GetElectronTriggerXSF(leppt, lepeta, Year);
 	}
 	if(isMuon){
 	  for(unsigned int itrig=0; itrig < vsSelMCTriggersMu_MultiLepCalc->size(); itrig++){
 	    if(vsSelMCTriggersMu_MultiLepCalc->at(itrig).find(mutrigger) != std::string::npos && viSelMCTriggersMu_MultiLepCalc->at(itrig) > 0) MCLepPastTrigger = 1;
+	    if(Year==2016 && vsSelMCTriggersMu_MultiLepCalc->at(itrig).find(mutrigger2) != std::string::npos && viSelMCTriggersMu_MultiLepCalc->at(itrig) > 0) MCLepPastTrigger = 1;
  	    if(vsSelMCTriggersMu_MultiLepCalc->at(itrig).find("HLT_IsoMu24") != std::string::npos && viSelMCTriggersMu_MultiLepCalc->at(itrig) > 0) HLT_IsoMu24 = 1;
 	    if(vsSelMCTriggersMu_MultiLepCalc->at(itrig).find("HLT_IsoMu24_eta2p1") != std::string::npos && viSelMCTriggersMu_MultiLepCalc->at(itrig) > 0) HLT_IsoMu24_eta2p1 = 1;
 	    if(vsSelMCTriggersMu_MultiLepCalc->at(itrig).find("HLT_IsoMu27") != std::string::npos && viSelMCTriggersMu_MultiLepCalc->at(itrig) > 0) HLT_IsoMu27 = 1;
@@ -946,7 +969,8 @@ void step1::Loop(TString inTreeName, TString outTreeName )
 	  }
 	  lepIdSF = hardcodedConditions.GetMuonIdSF(leppt, lepeta, Year);
 	  isoSF = hardcodedConditions.GetMuonIsoSF(leppt, lepeta, Year);	  
-	  triggerSF = hardcodedConditions.GetMuonTriggerSF(leppt, AK4HT, Year); 
+	  if(Year==2016){triggerSF = hardcodedConditions.GetMuonTriggerSF(leppt, lepeta, Year);} 
+	  else{triggerSF = hardcodedConditions.GetMuonTriggerSF(leppt, AK4HT, Year);} 
 	  triggerXSF = hardcodedConditions.GetMuonTriggerXSF(leppt, lepeta, Year); 
 	}
 	if (MCLepPastTrigger == 1 || MCHadPastTrigger == 1){
@@ -990,6 +1014,7 @@ void step1::Loop(TString inTreeName, TString outTreeName )
 	  //if(isSM){
 	  for(unsigned int itrig=0; itrig < vsSelTriggersMu_MultiLepCalc->size(); itrig++){
 	    if(vsSelTriggersMu_MultiLepCalc->at(itrig).find(mutrigger) != std::string::npos && viSelTriggersMu_MultiLepCalc->at(itrig) > 0) DataLepPastTrigger = 1;
+	    if(Year==2016 && vsSelMCTriggersMu_MultiLepCalc->at(itrig).find(mutrigger2) != std::string::npos && viSelMCTriggersMu_MultiLepCalc->at(itrig) > 0) MCLepPastTrigger =1;
  	    if(vsSelTriggersMu_MultiLepCalc->at(itrig).find("HLT_IsoMu24") != std::string::npos && viSelTriggersMu_MultiLepCalc->at(itrig) > 0) HLT_IsoMu24 = 1;
 	    if(vsSelTriggersMu_MultiLepCalc->at(itrig).find("HLT_IsoMu24_eta2p1") != std::string::npos && viSelTriggersMu_MultiLepCalc->at(itrig) > 0) HLT_IsoMu24_eta2p1 = 1;
 	    if(vsSelTriggersMu_MultiLepCalc->at(itrig).find("HLT_IsoMu27") != std::string::npos && viSelTriggersMu_MultiLepCalc->at(itrig) > 0) HLT_IsoMu27 = 1;
