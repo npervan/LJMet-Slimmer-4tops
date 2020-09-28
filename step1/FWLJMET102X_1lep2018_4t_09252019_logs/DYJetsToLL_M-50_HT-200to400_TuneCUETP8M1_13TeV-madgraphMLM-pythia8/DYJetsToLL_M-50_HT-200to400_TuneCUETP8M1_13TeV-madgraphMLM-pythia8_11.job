@@ -1,0 +1,13 @@
+use_x509userproxy = true
+universe = vanilla
+Executable = /home/npervan/TTTT/CMSSW_10_2_16_UL/src/LJMet-Slimmer-4tops/step1/makeStep1brux.sh
+Should_Transfer_Files = YES
+WhenToTransferOutput = ON_EXIT
+Transfer_Input_Files = /home/npervan/TTTT/CMSSW_10_2_16_UL/src/LJMet-Slimmer-4tops/step1/compileStep1.C, /home/npervan/TTTT/CMSSW_10_2_16_UL/src/LJMet-Slimmer-4tops/step1/makeStep1.C, /home/npervan/TTTT/CMSSW_10_2_16_UL/src/LJMet-Slimmer-4tops/step1/step1.cc, /home/npervan/TTTT/CMSSW_10_2_16_UL/src/LJMet-Slimmer-4tops/step1/step1.h, /home/npervan/TTTT/CMSSW_10_2_16_UL/src/LJMet-Slimmer-4tops/step1/HardcodedConditions.cc, /home/npervan/TTTT/CMSSW_10_2_16_UL/src/LJMet-Slimmer-4tops/step1/HardcodedConditions.h
+Output = DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_11.out
+Error = DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_11.err
+Log = DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_11.log
+Notification = Never
+Arguments = "DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1 DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8 /isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000 /mnt/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_4t_09252020_step1/nominal//DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8 'ext1164 ext1299 ext1449 ext1266 ext1271 ext1494 ext1161 ext1425 ext1496 ext1553 ext1155 ext13 ext1287 ext1565 ext1273 ext1471 ext1528 ext1210 ext1450 ext1523 ext1378 ext1382 ext1506 ext1610 ext1267 ext1111 ext1535 ext1383 ext1487 ext1639' 11 2016"
+
+Queue 1

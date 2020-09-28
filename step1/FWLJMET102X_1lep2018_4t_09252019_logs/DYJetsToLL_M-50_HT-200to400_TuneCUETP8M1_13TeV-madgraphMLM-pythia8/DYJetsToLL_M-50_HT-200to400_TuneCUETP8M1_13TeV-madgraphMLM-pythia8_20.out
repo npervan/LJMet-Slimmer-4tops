@@ -1,0 +1,241 @@
+node547.hep.brown.edu
+Fri Sep 25 19:57:17 EDT 2020
+WARNING: Developer's area is created for architecture slc6_amd64_gcc700 while your current OS is SLC7.
+/isilon/condor/node547.hep.brown.edu/execute/dir_14415
+setting macroDir to PWD
+
+Processing compileStep1.C...
+Running step1 over list: ext1498 ext150 ext1122 ext1670 ext1486 ext1459 ext1170 ext1554 ext1259 ext1201 ext1173 ext1624 ext1636 ext1432 ext1481 ext1596 ext178 ext1658 ext190 ext167 ext1677 ext1541 ext1613 ext1560 ext1614 ext115 ext1460 ext1365 ext1655 ext1311
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1498.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_498
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_498.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1498.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_498.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext150.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_50
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_50.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext150.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_50.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1122.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_122
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_122.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1122.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_122.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1670.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_670
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_670.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1670.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_670.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1486.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_486
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_486.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1486.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_486.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1459.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_459
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_459.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1459.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_459.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1170.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_170
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_170.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1170.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_170.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1554.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_554
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_554.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1554.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_554.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1259.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_259
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_259.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1259.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_259.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1201.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_201
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_201.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1201.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_201.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1173.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_173
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_173.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1173.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_173.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1624.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_624
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_624.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1624.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_624.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1636.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_636
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_636.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1636.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_636.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1432.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_432
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_432.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1432.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_432.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1481.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_481
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_481.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1481.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_481.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1596.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_596
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_596.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1596.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_596.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext178.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_78
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_78.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext178.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_78.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1658.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_658
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_658.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1658.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_658.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext190.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_90
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_90.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext190.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_90.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext167.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_67
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_67.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext167.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_67.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1677.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_677
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_677.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1677.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_677.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1541.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_541
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_541.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1541.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_541.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1613.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_613
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_613.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1613.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_613.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1560.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_560
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_560.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1560.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_560.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1614.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_614
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_614.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1614.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_614.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext115.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_15
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_15.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext115.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_15.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1460.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_460
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_460.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1460.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_460.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1365.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_365
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_365.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1365.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_365.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1655.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_655
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_655.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1655.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_655.root
+WARNING! File doesn't exist! Exiting
+creating DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1311.root by reading DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_311
+
+Processing makeStep1.C("/isilon/condor/node547.hep.brown.edu/execute/dir_14415","root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_311.root","DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_ext1311.root",2016)...
+
+Running shift nominal
+Opening file: root://cmseos.fnal.gov//isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/singleLep2016/200326_014432/0000/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8-ext1_311.root
+WARNING! File doesn't exist! Exiting
+ROOT Files:
+cp output for condor
+hadd Target file: DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_20nominal_hadd.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: *nominal.root
+cp DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_20nominal_hadd.root /mnt/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_4t_09252020_step1/nominal//DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_20.root
+hadd Target file: DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_20JECup_hadd.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: *JECup.root
+cp DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_20JECup_hadd.root /mnt/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_4t_09252020_step1/JECup//DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_20.root
+hadd Target file: DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_20JECdown_hadd.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: *JECdown.root
+cp DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_20JECdown_hadd.root /mnt/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_4t_09252020_step1/JECdown//DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_20.root
+hadd Target file: DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_20JERup_hadd.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: *JERup.root
+cp DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_20JERup_hadd.root /mnt/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_4t_09252020_step1/JERup//DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_20.root
+hadd Target file: DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_20JERdown_hadd.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: *JERdown.root
+cp DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_20JERdown_hadd.root /mnt/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_4t_09252020_step1/JERdown//DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_20.root
+done

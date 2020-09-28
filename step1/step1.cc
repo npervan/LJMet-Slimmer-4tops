@@ -734,10 +734,10 @@ void step1::Loop(TString inTreeName, TString outTreeName )
       }
       if(genHT>500 && Ngenjet>=9) {isHTgt500Njetge9 = 1;}
       }
-      
+
       if( isTTSemilepIncHT0Njet0   && isHTgt500Njetge9==1 ) continue;
       if( isTTSemilepIncHT500Njet9 && isHTgt500Njetge9==0 ) continue;
-      
+
 //       if( outTTLF && genTtbarIdCategory_TTbarMassCalc->at(0)!=0 ) continue;
 //       if( outTTCC && genTtbarIdCategory_TTbarMassCalc->at(0)!=1 ) continue;
 //       //if( outTTBB && (genTtbarIdCategory_TTbarMassCalc->at(0)==0 || genTtbarIdCategory_TTbarMassCalc->at(0)==1) ) continue;
@@ -776,7 +776,7 @@ void step1::Loop(TString inTreeName, TString outTreeName )
       if(elPt_MultiLepCalc->size()>0 && muPt_MultiLepCalc->size()==0) {isElectron = 1; isMuon = 0;}
       if(elPt_MultiLepCalc->size()==0 && muPt_MultiLepCalc->size()>0) {isElectron = 0; isMuon = 1;}
       if(isElectron==0 && isMuon==0){std::cout << "got no leptons, something wrong" << std::endl; continue;}
-      
+
 //       if(isMuon == 1) {
 //       	if(muRelIso_MultiLepCalc->at(0) > 0.15) {
 //       	  NrelIsoFail++;
@@ -854,7 +854,6 @@ void step1::Loop(TString inTreeName, TString outTreeName )
       std::vector<std::string> mutriggersX;
       if(Year==2016){
 	//No cross triggers in 2016 AN
-	continue;
       }
       else if(Year==2017){
       eltriggersX = {"Ele15_IsoVVVL_PFHT450","Ele50_IsoVVVL_PFHT450","Ele15_IsoVVVL_PFHT600","Ele35_WPTight_Gsf","Ele38_WPTight_Gsf"};
@@ -872,8 +871,7 @@ void step1::Loop(TString inTreeName, TString outTreeName )
       std::vector<std::string> mutriggers;
       std::vector<std::string> hadtriggers;
       std::map<TString, std::vector<std::string>> mctriggers;
-      mctriggers = {{"16BCDEF",{"Ele32_eta2p1_WPTight_Gsf", "IsoMu24", "IsoTkMu24"}}, // No had trigger in 2016 AN
-		    {"16GH",{"Ele32_eta2p1_WPTight_Gsf", "IsoMu24", "IsoTkMu24"}},  //No had trigger in 2016 AN
+      mctriggers = {{"16",{"Ele32_eta2p1_WPTight_Gsf", "IsoMu24", "IsoTkMu24"}}, // No had trigger in 2016 AN
 		    {"17B", {"Ele35_WPTight_Gsf", "IsoMu24_eta2p1" , "PFHT380_SixPFJet32_DoublePFBTagDeepCSV_2p2" }},
 		    {"17C",{"Ele35_WPTight_Gsf", "IsoMu27" , "PFHT380_SixPFJet32_DoublePFBTagCSV_2p2" }},
 		    {"17DEF",{"Ele32_WPTight_Gsf", "IsoMu27" , "PFHT380_SixPFJet32_DoublePFBTagDeepCSV_2p2" }},
@@ -881,8 +879,7 @@ void step1::Loop(TString inTreeName, TString outTreeName )
 
 
       std::map<TString, std::vector<std::string>> datatriggers;
-      datatriggers = {{"16BCDEF",{"Ele32_eta2p1_WPTight_Gsf", "IsoMu24", "IsoTkMu24"}}, // No had trigger in 2016 AN
-		      {"16GH",{"Ele32_eta2p1_WPTight_Gsf", "IsoMu24", "IsoTkMu24"}}, // No had trigger in 2016 AN
+      datatriggers = {{"16",{"Ele32_eta2p1_WPTight_Gsf", "IsoMu24", "IsoTkMu24"}}, // No had trigger in 2016 AN
 		      {"17B", {"Ele35_WPTight_Gsf", "IsoMu24_eta2p1" , "PFHT380_SixJet32_DoubleBTagCSV_p075" }},
 		      {"17C",{"Ele35_WPTight_Gsf", "IsoMu27" , "PFHT380_SixPFJet32_DoublePFBTagCSV_2p2" }},
 		      {"17DEF",{"Ele32_WPTight_Gsf", "IsoMu27" , "PFHT380_SixPFJet32_DoublePFBTagDeepCSV_2p2" }},
@@ -890,9 +887,9 @@ void step1::Loop(TString inTreeName, TString outTreeName )
 		      {"18CD",{"Ele32_WPTight_Gsf", "IsoMu24" , "PFHT400_SixPFJet32_DoublePFBTagDeep_CSV_2p94" }}};
       if (!isMC){
 	if (Year==2016){
-	  eltrigger = datatriggers.at(Era).at(0);
-          mutrigger = datatriggers.at(Era).at(1);
-          mutrigger2 = datatriggers.at(Era).at(2);
+	  eltrigger = datatriggers.at("16").at(0);
+          mutrigger = datatriggers.at("16").at(1);
+          mutrigger2 = datatriggers.at("16").at(2);
 	}
 	else{
 	eltrigger = datatriggers.at(Era).at(0);
@@ -902,9 +899,9 @@ void step1::Loop(TString inTreeName, TString outTreeName )
       }
       else{
 	if (Year==2016){
-	  eltrigger = mctriggers.at(Era).at(0);
-	  mutrigger = mctriggers.at(Era).at(1);
-	  mutrigger2 = mctriggers.at(Era).at(2);
+	  eltrigger = mctriggers.at("16").at(0);
+	  mutrigger = mctriggers.at("16").at(1);
+	  mutrigger2 = mctriggers.at("16").at(2);
 	}
 	else if (Year==2017){
 	  TRandom3 r;
@@ -927,6 +924,10 @@ void step1::Loop(TString inTreeName, TString outTreeName )
 	  hadtrigger = mctriggers.at("18").at(2);
 	}
       }
+
+      //if(jentry % 100 ==0) cout << "eltrigger: " << eltrigger << endl;
+      //if(jentry % 100 ==0) cout << "mutrigger: " << mutrigger << endl;
+      //if(jentry % 100 ==0) cout << "mutrigger2: " << mutrigger2 << endl;
       
       if(isMC){
 	for(unsigned int itrig=0; itrig < vsSelMCTriggersHad_MultiLepCalc->size(); itrig++){
@@ -937,6 +938,7 @@ void step1::Loop(TString inTreeName, TString outTreeName )
 	  if(vsSelMCTriggersHad_MultiLepCalc->at(itrig).find("HLT_PFHT400_SixJet30_DoubleBTagCSV_p056") != std::string::npos && viSelMCTriggersHad_MultiLepCalc->at(itrig) > 0) HLT_PFHT400_SixJet30_DoubleBTagCSV_p056 = 1;	
 	}
 	if(isElectron){
+	  //cout << "is electron" << endl;
 	  for(unsigned int itrig=0; itrig < vsSelMCTriggersEl_MultiLepCalc->size(); itrig++){
 	    if(vsSelMCTriggersEl_MultiLepCalc->at(itrig).find(eltrigger) != std::string::npos && viSelMCTriggersEl_MultiLepCalc->at(itrig) > 0) MCLepPastTrigger = 1;
 	    if(vsSelMCTriggersEl_MultiLepCalc->at(itrig).find("HLT_Ele15_IsoVVVL_PFHT450") != std::string::npos && viSelMCTriggersEl_MultiLepCalc->at(itrig) > 0) HLT_Ele15_IsoVVVL_PFHT450 = 1;
@@ -956,6 +958,7 @@ void step1::Loop(TString inTreeName, TString outTreeName )
           triggerXSF = hardcodedConditions.GetElectronTriggerXSF(leppt, lepeta, Year);
 	}
 	if(isMuon){
+	  //cout << "is muon" << endl;
 	  for(unsigned int itrig=0; itrig < vsSelMCTriggersMu_MultiLepCalc->size(); itrig++){
 	    if(vsSelMCTriggersMu_MultiLepCalc->at(itrig).find(mutrigger) != std::string::npos && viSelMCTriggersMu_MultiLepCalc->at(itrig) > 0) MCLepPastTrigger = 1;
 	    if(Year==2016 && vsSelMCTriggersMu_MultiLepCalc->at(itrig).find(mutrigger2) != std::string::npos && viSelMCTriggersMu_MultiLepCalc->at(itrig) > 0) MCLepPastTrigger = 1;
@@ -967,16 +970,28 @@ void step1::Loop(TString inTreeName, TString outTreeName )
 	    	if(vsSelMCTriggersMu_MultiLepCalc->at(itrig).find(mutriggersX.at(jtrig)) != std::string::npos && viSelMCTriggersMu_MultiLepCalc->at(itrig) > 0) MCPastTriggerX = 1;
 	    }
 	  }
+	  //cout << "after trigger loops" << endl;
+	  //cout << "pt: " << leppt << endl;
+	  //cout << "eta: " << lepeta << endl;
+	  //cout << "Year: " << Year << endl;
+
+	  //cout << "Get IdSF" << endl;
 	  lepIdSF = hardcodedConditions.GetMuonIdSF(leppt, lepeta, Year);
+	  //cout << "Get IsoSF" << endl;
 	  isoSF = hardcodedConditions.GetMuonIsoSF(leppt, lepeta, Year);	  
-	  if(Year==2016){triggerSF = hardcodedConditions.GetMuonTriggerSF(leppt, lepeta, Year);} 
+	  if(Year==2016){
+	    //cout << "Try to get SF" << endl;
+	    triggerSF = hardcodedConditions.GetMuonTriggerSF(leppt, lepeta, Year);
+	    //cout << "Got SF" << endl;
+	  } 
 	  else{triggerSF = hardcodedConditions.GetMuonTriggerSF(leppt, AK4HT, Year);} 
 	  triggerXSF = hardcodedConditions.GetMuonTriggerXSF(leppt, lepeta, Year); 
 	}
 	if (MCLepPastTrigger == 1 || MCHadPastTrigger == 1){
 	  MCPastTrigger = 1;
 	}
-
+	//cout << "MCPastTrigger" << MCPastTrigger << endl;
+	
 	DataPastTrigger = 1;
 	DataPastTriggerX = 1;
 	DataLepPastTrigger = 1;
@@ -1026,7 +1041,6 @@ void step1::Loop(TString inTreeName, TString outTreeName )
 	  if (DataLepPastTrigger == 1 || DataHadPastTrigger == 1){
 	    DataPastTrigger = 1;
 	  }
-	  //}
 	}
 	MCPastTrigger = 1;
 	MCPastTriggerX = 1;
@@ -1211,8 +1225,10 @@ void step1::Loop(TString inTreeName, TString outTreeName )
       // ----------------------------------------------------------------------------
       // Skip failing events
       // ----------------------------------------------------------------------------
-            
+      //cout << "Reach Bottom" << endl;
+      
       if(!(isPastMETcut && isPastHTCut && isPastNAK8JetsCut && isPastNjetsCut && isPastLepPtCut && (isPastElEtaCut || isPastMuEtaCut))) continue;
+      //cout << npass_all << "/" << jentry <<  endl;
       npass_all+=1;
       
       ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1226,6 +1242,7 @@ void step1::Loop(TString inTreeName, TString outTreeName )
       // ----------------------------------------------------------------------------
       // Combine lepton variables into one set
       // ----------------------------------------------------------------------------
+      //cout << "combine lepton" << endl;
 
       if(isElectron){
 	leptonPt_MultiLepCalc = leppt;
@@ -1249,6 +1266,7 @@ void step1::Loop(TString inTreeName, TString outTreeName )
       // ----------------------------------------------------------------------------
       // Apply pt ordering to AK4 vectors
       // ----------------------------------------------------------------------------
+      //cout << "apply pt ordering to ak4" << endl;
 
       std::sort(jetptindpair.begin(), jetptindpair.end(), comparepair);
       theJetPt_JetSubCalc_PtOrdered.clear();
@@ -1299,7 +1317,8 @@ void step1::Loop(TString inTreeName, TString outTreeName )
       // ----------------------------------------------------------------------------
       // AK4 Jet - lepton associations
       // ----------------------------------------------------------------------------
-         
+      //cout << "ak4 lepton assoc" << endl;
+
       BJetLeadPt = -99;
       BJetLeadPt_bSFup = -99;
       BJetLeadPt_bSFdn = -99;
@@ -1440,12 +1459,13 @@ void step1::Loop(TString inTreeName, TString outTreeName )
       // ----------------------------------------------------------------------------
       // Skip events that fail # of btag requirement
       // ----------------------------------------------------------------------------  
+
       if(NJetsCSVwithSF_MultiLepCalc<nbjetsCut && NJetsCSVwithSF_MultiLepCalc_bSFup<nbjetsCut && NJetsCSVwithSF_MultiLepCalc_bSFdn<nbjetsCut && NJetsCSVwithSF_MultiLepCalc_lSFup<nbjetsCut && NJetsCSVwithSF_MultiLepCalc_lSFdn<nbjetsCut) continue;
 
       // ----------------------------------------------------------------------------
       // 13TeV Top pT reweighting -- TTbarMassCalc top vectors are the wrong tops....
       // ----------------------------------------------------------------------------
-      
+
       genTopPt = -999;
       genAntiTopPt = -999;
       topPtWeight13TeV = 1.0;
@@ -1570,7 +1590,6 @@ void step1::Loop(TString inTreeName, TString outTreeName )
       // ----------------------------------------------------------------------------
       // Apply pt ordering to AK8 vectors 
       // ----------------------------------------------------------------------------
-
       //Pt ordering for AK8
       std::sort(jetak8ptindpair.begin(), jetak8ptindpair.end(), comparepair);
       
@@ -1665,7 +1684,7 @@ void step1::Loop(TString inTreeName, TString outTreeName )
 	// ----------------------------------------------------------------------------
 	// AK8 - lepton and AK8 -- AK8 associations
 	// ----------------------------------------------------------------------------
-	
+
 	ak8_lv.SetPtEtaPhiE(theJetAK8Pt_JetSubCalc_PtOrdered.at(ijet),theJetAK8Eta_JetSubCalc_PtOrdered.at(ijet),theJetAK8Phi_JetSubCalc_PtOrdered.at(ijet),theJetAK8Energy_JetSubCalc_PtOrdered.at(ijet));
 	if(ijet == 0) leadak8 = ak8_lv;
 
@@ -1685,7 +1704,7 @@ void step1::Loop(TString inTreeName, TString outTreeName )
 	// ----------------------------------------------------------------------------
 	// W & top tagging on MC
 	// ----------------------------------------------------------------------------
-	
+
 	float tau21WP = 0.45; //WP from https://twiki.cern.ch/twiki/bin/viewauth/CMS/JetTopTagging#13_TeV_Working_Points_and_Scale
 	float tau32WP = 0.80; //WP5 from https://twiki.cern.ch/twiki/bin/viewauth/CMS/JetTopTagging#13_TeV_Working_Points_and_Scale
 
@@ -1707,6 +1726,7 @@ void step1::Loop(TString inTreeName, TString outTreeName )
 	  // ------------------------------------------------------------------------------------------------------------------
 	  // TRUTH MATCHING
 	  // ------------------------------------------------------------------------------------------------------------------
+
 	  float minDR = 1000;
 	  float matchedPt= -99;
 	  int matchedID = 0;
@@ -1766,18 +1786,20 @@ void step1::Loop(TString inTreeName, TString outTreeName )
 	  // ------------------------------------------------------------------------------------------------------------------
 	  // TOP TAGGING
 	  // ------------------------------------------------------------------------------------------------------------------
+	  //cout << "top tagging" << endl;
+
 	  double tau32SF = 1.0;
 	  double tau32SFup = 1.0;
 	  double tau32SFdn = 1.0;
 	  double tau32eff = 1.0;
-	  if(isTmatched && matchedPt >= 400){	    
+	  if(isTmatched && matchedPt >= 400){
 	    hardcodedConditions.GetTtaggingSF(matchedPt, &tau32SF, &tau32SFup, &tau32SFdn, Year);
 	    // Use matched T to find the efficiency -- EWK/QCD will almost never pass here (use ttbar eff when they do)
-		if(isTTTT) {hardcodedConditions.GetTtaggingEff(matchedPt, &tau32eff, Year, "tttt");}
-		else if(isXX) {hardcodedConditions.GetTtaggingEff(matchedPt, &tau32eff, Year, "x53x53",SigMass);}		
-		else if(isTT) {hardcodedConditions.GetTtaggingEff(matchedPt, &tau32eff, Year, "ttbar");}
-		else {hardcodedConditions.GetTtaggingEff(matchedPt, &tau32eff, Year, "singletop");}
-	  }
+	    if(isTTTT) {hardcodedConditions.GetTtaggingEff(matchedPt, &tau32eff, Year, "tttt");}
+	    else if(isXX) {hardcodedConditions.GetTtaggingEff(matchedPt, &tau32eff, Year, "x53x53",SigMass);}		
+	    else if(isTT) {hardcodedConditions.GetTtaggingEff(matchedPt, &tau32eff, Year, "ttbar");}
+	    else {hardcodedConditions.GetTtaggingEff(matchedPt, &tau32eff, Year, "singletop");}
+      	  }
 	  
 	  // Set the initial tagged/untagged state
 	  bool isTtagged = (massSD > 105) && (massSD < 220) && (tau32 < tau32WP) && (theJetAK8Pt_JetSubCalc_PtOrdered.at(ijet) >= 400);
@@ -1794,7 +1816,7 @@ void step1::Loop(TString inTreeName, TString outTreeName )
 	  int tag_top_JMSdn = applySF(isTtagged_JMSdn,tau32SF,tau32eff);
 	  int tag_top_JMRup = applySF(isTtagged_JMRup,tau32SF,tau32eff);
 	  int tag_top_JMRdn = applySF(isTtagged_JMRdn,tau32SF,tau32eff);
- 
+
 	  // Now increase the tag count in the right variable	  
 	  NJetsTtagged += tag_top;
 	  NJetsTtagged_shifts[0] += tag_top_tau32up;
@@ -1803,9 +1825,9 @@ void step1::Loop(TString inTreeName, TString outTreeName )
 	  NJetsTtagged_shifts[3] += tag_top_JMSdn;
 	  NJetsTtagged_shifts[4] += tag_top_JMRup;
 	  NJetsTtagged_shifts[5] += tag_top_JMRdn;
-	  
-	  if(tag_top && theJetAK8Pt_JetSubCalc_PtOrdered.at(ijet) > TJetLeadPt){ TJetLeadPt = theJetAK8Pt_JetSubCalc_PtOrdered.at(ijet); }
 
+	  if(tag_top && theJetAK8Pt_JetSubCalc_PtOrdered.at(ijet) > TJetLeadPt){ TJetLeadPt = theJetAK8Pt_JetSubCalc_PtOrdered.at(ijet); }
+	  
 	  // ------------------------------------------------------------------------------------------------------------------
 	  // W TAGGING
 	  // ------------------------------------------------------------------------------------------------------------------
@@ -1890,6 +1912,7 @@ void step1::Loop(TString inTreeName, TString outTreeName )
     // HOT TAGGER -- SCALE FACTORS TO BE ADDED!!!
     // !!!! THIS SHOULD BE UPDATED WHEN FWLJMET NTUPLES ARE AVAILABLE WITH UPDATED HOTTAGGERCALC; i.e., WITH getBestGenTopMatch !!!!!!!
     // ----------------------------------------------------------------------------
+	//cout << "Hot tagger" << endl;
      NresolvedTops1pFakeNoSF = 0;
      NresolvedTops2pFakeNoSF = 0;
      NresolvedTops5pFakeNoSF = 0;
@@ -1921,6 +1944,7 @@ void step1::Loop(TString inTreeName, TString outTreeName )
 		    // ------------------------------------------------------------------------------------------------------------------
 		    // TRUTH MATCHING
 		    // ------------------------------------------------------------------------------------------------------------------
+	  //cout << "data truth" << endl;
 		    float minDRtop = 1000;
 		    float minDRtopD1 = 1000;
 		    float minDRtopD2 = 1000;
@@ -1958,8 +1982,8 @@ void step1::Loop(TString inTreeName, TString outTreeName )
 	    	     minDRtopDs[2] = resolvedTopD3.DeltaR(trueTopD3);
 	    	     std::sort(minDRtopDs.begin(), minDRtopDs.end(), comparefloat);
 	    	     minDRtopD3 = minDRtopDs.at(0);
-	    	     }
-          	   }
+		     }
+	          }
          	
           	double TopTagSF1p = 1.0;
           	double TopTagSF2p = 1.0;
@@ -2089,12 +2113,13 @@ void step1::Loop(TString inTreeName, TString outTreeName )
         	if(topDiscriminator_HOTTaggerCalc->at(itop) > 0.92) NresolvedTops2pFake+=1;
         	if(topDiscriminator_HOTTaggerCalc->at(itop) > 0.95) NresolvedTops1pFake+=1;
           	}
-        }
+       }
 
       // ----------------------------------------------------------------------------
       // PDF and Matrix Element energy scale weights
       // ----------------------------------------------------------------------------
-
+     //cout << "PDF energy sw" << endl;
+     
       std::vector<double> renorm;
       std::vector<double> pdf;
       renormWeights.clear();
@@ -2204,7 +2229,7 @@ void step1::Loop(TString inTreeName, TString outTreeName )
       // ----------------------------------------------------------------------------
       // DONE!! Write the tree
       // ----------------------------------------------------------------------------
-      
+      //cout << "write tree" << endl;
       outputTree->Fill();
    }
    std::cout<<"Nelectrons      = "<<Nelectrons<<" / "<<nentries<<std::endl;

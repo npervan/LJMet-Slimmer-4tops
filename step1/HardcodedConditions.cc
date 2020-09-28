@@ -1771,7 +1771,7 @@ void HardcodedConditions::GetTtaggingEff2016(double pt, double *eff, std::string
 {
 	// TO-BE-IMPLEMENTED!!!!!!!
 	// CURRENTLY SET TO 2017 EFFICIENCIES !!!!
-	GetTtaggingEff2016(pt, eff, sample, massIndex);
+	GetTtaggingEff2017(pt, eff, sample, massIndex);
 
 }
 
@@ -3484,31 +3484,32 @@ double HardcodedConditions::GetMuonIdSF2016(double pt, double eta)
 	    else if (pt < 30.0 && pt > 25.0) return 0.9890884461284933;
 	    else if (pt < 120.0 && pt > 60.0) return 0.9920464322143979;
 	    else if (pt < 40.0 && pt > 30.0) return 0.9946469069883841;
-	    else if (pt < 50.0 && pt > 40.0) return 0.9926528825155183; }
+	    else if (pt < 50.0 && pt > 40.0) return 0.9926528825155183;
+	    else if ( pt > 120.0) return 1.0005;}
 	else if (fabs(eta) < 2.40 && pt > 2.10) {
 	    if (pt < 25.0 && pt > 20.0) return 0.9758095839531763;
 	    else if (pt < 60.0 && pt > 50.0) return 0.9673568416097894;
 	    else if (pt < 30.0 && pt > 25.0) return 0.9745153594179884;
 	    else if (pt < 120.0 && pt > 60.0) return 0.9766311856731202;
 	    else if (pt < 40.0 && pt > 30.0) return 0.9787410500158746;
-	    else if (pt < 50.0 && pt > 40.0) return 0.978189122919501; }
+	    else if (pt < 50.0 && pt > 40.0) return 0.978189122919501;
+	    else if ( pt > 120.0) return 0.9964;}
 	else if (fabs(eta) < 1.20 && fabs(eta) > 0.90) {
 	    if (pt < 25.0 && pt > 20.0) return 0.9927389275515244;
 	    else if (pt < 60.0 && pt > 50.0) return 0.9839056384760008;
 	    else if (pt < 30.0 && pt > 25.0) return 0.985063939762512;
 	    else if (pt < 120.0 && pt > 60.0) return 0.984060403143468;
 	    else if (pt < 40.0 && pt > 30.0) return 0.9865359464182247;
-	    else if (pt < 50.0 && pt > 40.0) return 0.984913093101493; }
+	    else if (pt < 50.0 && pt > 40.0) return 0.984913093101493; 
+	    else if ( pt > 120.0) return 0.9992;}
 	else if (fabs(eta) < 0.90 && fabs(eta) > 0.0) {
 	    if (pt < 25.0 && pt > 20.0) return 0.9910777627756951;
 	    else if (pt < 60.0 && pt > 50.0) return 0.9855545160334763;
 	    else if (pt < 30.0 && pt > 25.0) return 0.987410468262084;
 	    else if (pt < 120.0 && pt > 60.0) return 0.9898057377093389;
 	    else if (pt < 40.0 && pt > 30.0) return 0.9907753279135898;
-	    else if (pt < 50.0 && pt > 40.0) return 0.9892483588952047; }
-	else{
-	  std::cerr << "The pt=" << pt << ",eta=" << eta << " range is not coded into GetMuonIdSF2016!" << std::endl;
-	  return 0.;}		    
+	    else if (pt < 50.0 && pt > 40.0) return 0.9892483588952047;
+	    else if ( pt > 120.0) return 0.9999;}
 }
 
 double HardcodedConditions::GetMuonIdSF2017(double pt, double eta)

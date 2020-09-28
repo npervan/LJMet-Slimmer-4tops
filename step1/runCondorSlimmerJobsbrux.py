@@ -2,7 +2,7 @@ import os,shutil,datetime,time
 import getpass
 from ROOT import *
 from XRootD import client #execfile("/uscms_data/d3/jmanagan/EOSSafeUtils.py")
-xrdClient = client.FileSystem("root://cmseos.fnal.gov/")
+xrdClient = client.FileSystem("root://brux11.hep.brown.edu:1094/") #"root://cmseos.fnal.gov/")
 
 start_time = time.time()
 
@@ -10,15 +10,15 @@ start_time = time.time()
 
 #relbase ='/user_data/ssagir/CMSSW_10_2_10/'
 #inputDir='/eos/uscms/store/user/lpcljm/FWLJMET102X_1lep2017_052219/' # or 2018
-inputDir='/eos/uscms/store/user/lpcljm/FWLJMET102X_1lep2017_Oct2019/' # or 2018
-outputDir='/mnt/hadoop/store/group/bruxljm/FWLJMET102X_1lep2017_4t_12142019_step1/nominal/' # or 2018
-condorDir='/home/wzhang/work/fwljmet_201905/CMSSW_10_2_16_UL/src/LJMet-Slimmer-4tops/step1/FWLJMET102X_1lep2017_4t_12142019_logs/' # or 2018
-Year = 2017 # or 2018
+inputDir='/isilon/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_Feb2020'
+outputDir='/mnt/hadoop/store/group/bruxljm/FWLJMET102X_1lep2016_4t_09252020_step1/nominal/' # or 2018
+condorDir='/home/npervan/TTTT/CMSSW_10_2_16_UL/src/LJMet-Slimmer-4tops/step1/FWLJMET102X_1lep2018_4t_09252019_logs/' # or 2018
+Year = 2016 # or 2018
 finalStateYear = 'singleLep'+str(Year)
 shifts = ['JECup','JECdown','JERup','JERdown']
 
 runDir=os.getcwd()
-inDir=inputDir[10:]
+inDir=inputDir#[10:]
 outDir=outputDir#[10:]
 
 gROOT.ProcessLine('.x compileStep1.C')
@@ -27,73 +27,92 @@ print 'Starting submission'
 count=0
 
 dirList = [
-#'DYJetsToLL_M-50_HT-1200to2500_TuneCP5_13TeV-madgraphMLM-pythia8',
-#'DYJetsToLL_M-50_HT-200to400_TuneCP5_13TeV-madgraphMLM-pythia8',
-#'DYJetsToLL_M-50_HT-2500toInf_TuneCP5_13TeV-madgraphMLM-pythia8',
-#'DYJetsToLL_M-50_HT-400to600_TuneCP5_13TeV-madgraphMLM-pythia8',
-#'DYJetsToLL_M-50_HT-600to800_TuneCP5_13TeV-madgraphMLM-pythia8',
-#'DYJetsToLL_M-50_HT-800to1200_TuneCP5_13TeV-madgraphMLM-pythia8',
-#'QCD_HT1000to1500_TuneCP5_13TeV-madgraph-pythia8',
-#'QCD_HT1500to2000_TuneCP5_13TeV-madgraph-pythia8',
-#'QCD_HT2000toInf_TuneCP5_13TeV-madgraph-pythia8',
-#'QCD_HT200to300_TuneCP5_13TeV-madgraph-pythia8',
-#'QCD_HT300to500_TuneCP5_13TeV-madgraph-pythia8',
-#'QCD_HT500to700_TuneCP5_13TeV-madgraph-pythia8',
-#'QCD_HT700to1000_TuneCP5_13TeV-madgraph-pythia8',
-#'ST_s-channel_antitop_leptonDecays_13TeV-PSweights_powheg-pythia',
+'DYJetsToLL_M-50_HT-1200to2500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8',
+'DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8',
+'DYJetsToLL_M-50_HT-2500toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8',
+'DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8',
+'DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8',
+'DYJetsToLL_M-50_HT-800to1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8',
+'QCD_HT1000to1500_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'QCD_HT2000toInf_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'QCD_HT200to300_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'QCD_HT300to500_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'QCD_HT500to700_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'QCD_HT700to1000_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'ST_s-channel_4f_leptonDecays_13TeV-amcatnlo-pythia8', #'ST_s-channel_antitop_leptonDecays_13TeV-PSweights_powheg-pythia',
 #'ST_s-channel_top_leptonDecays_13TeV-PSweights_powheg-pythia',
-#'ST_t-channel_antitop_4f_InclusiveDecays_TuneCP5_PSweights_13TeV-powheg-pythia8',
-#'ST_t-channel_top_4f_InclusiveDecays_TuneCP5_PSweights_13TeV-powheg-pythia8',
-#'ST_tW_antitop_5f_inclusiveDecays_TuneCP5_PSweights_13TeV-powheg-pythia8',
-#'ST_tW_top_5f_inclusiveDecays_TuneCP5_PSweights_13TeV-powheg-pythia8',
-# 'JetHT',
-#'SingleElectron',
-#'SingleMuon',
-#'TTHH_TuneCP5_13TeV-madgraph-pythia8',
-#'TTTJ_TuneCP5_13TeV-madgraph-pythia8',
-#'TTTT_TuneCP5_13TeV-amcatnlo-pythia8',
-#'TTTT_TuneCP5_PSweights_13TeV-amcatnlo-pythia8',
-#'TTTW_TuneCP5_13TeV-madgraph-pythia8',
-#'TTTo2L2Nu_TuneCP5_PSweights_13TeV-powheg-pythia8',
-# 'TTTo2L2Nu_TuneCP5_erdON_13TeV-powheg-pythia8',
-#'TTTo2L2Nu_TuneCP5down_PSweights_13TeV-powheg-pythia8',
-#'TTTo2L2Nu_TuneCP5up_PSweights_13TeV-powheg-pythia8',
-#'TTTo2L2Nu_hdampDOWN_TuneCP5_PSweights_13TeV-powheg-pythia8',
-#'TTTo2L2Nu_hdampUP_TuneCP5_PSweights_13TeV-powheg-pythia8',
-#'TTToHadronic_TuneCP5_PSweights_13TeV-powheg-pythia8',
-# 'TTToHadronic_TuneCP5_erdON_13TeV-powheg-pythia8',
-#'TTToHadronic_TuneCP5down_PSweights_13TeV-powheg-pythia8',
-#'TTToHadronic_TuneCP5up_PSweights_13TeV-powheg-pythia8',
-#'TTToHadronic_hdampDOWN_TuneCP5_PSweights_13TeV-powheg-pythia8',
-#'TTToHadronic_hdampUP_TuneCP5_PSweights_13TeV-powheg-pythia8',
-#'TTToSemiLepton_HT500Njet9_TuneCP5_PSweights_13TeV-powheg-pythia8',
+'ST_t-channel_antitop_4f_InclusiveDecays_13TeV_PSweights-powhegV2-madspin',
+'ST_t-channel_top_4f_InclusiveDecays_13TeV_PSweights-powhegV2-madspin',
+'ST_tW_antitop_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M2T4',#'ST_tW_antitop_5f_inclusiveDecays_TuneCP5_PSweights_13TeV-powheg-pythia8',
+'ST_tW_top_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M2T4',#'ST_tW_top_5f_inclusiveDecays_TuneCP5_PSweights_13TeV-powheg-pythia8',
+#'JetHT',
+'SingleElectron',
+'SingleMuon',
+'BprimeBprime_M-1000_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'BprimeBprime_M-1100_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'BprimeBprime_M-1200_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'BprimeBprime_M-1300_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'BprimeBprime_M-1400_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'BprimeBprime_M-1500_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'BprimeBprime_M-1600_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'BprimeBprime_M-1700_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'BprimeBprime_M-1800_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'BprimeBprime_M-700_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'BprimeBprime_M-800_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'BprimeBprime_M-900_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'TprimeTprime_M-1000_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'TprimeTprime_M-1100_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'TprimeTprime_M-1200_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'TprimeTprime_M-1300_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'TprimeTprime_M-1400_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'TprimeTprime_M-1500_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'TprimeTprime_M-1600_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'TprimeTprime_M-1700_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'TprimeTprime_M-1800_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'TprimeTprime_M-700_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'TprimeTprime_M-800_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'TprimeTprime_M-900_TuneCUETP8M1_13TeV-madgraph-pythia8',
+'TT_hdampDOWN_TuneCUETP8M2T4_13TeV-powheg-pythia8',
+'TT_hdampUP_TuneCUETP8M2T4_13TeV-powheg-pythia8',
+'TTHH_TuneCUETP8M2T4_13TeV-madgraph-pythia8',
+'ttHTobb_M125_13TeV_powheg_pythia8',
+'ttHToNonbb_M125_TuneCUETP8M2_ttHtranche3_13TeV-powheg-pythia8',
+'TTJets_SingleLeptFromTbar_TuneCUETP8M1_13TeV-madgraphMLM-pythia8',
+'TTJets_SingleLeptFromT_TuneCUETP8M1_13TeV-madgraphMLM-pythia8',
+'TT_Mtt-1000toInf_TuneCUETP8M2T4_13TeV-powheg-pythia8',
+'TT_Mtt-700to1000_TuneCUETP8M2T4_13TeV-powheg-pythia8',
+'TTTJ_TuneCUETP8M2T4_13TeV-madgraph-pythia8',
+'TTTo2L2Nu_TuneCP5_PSweights_13TeV-powheg-pythia8',
+'TTToHadronic_TuneCP5_PSweights_13TeV-powheg-pythia8',
+'TTToSemiLepton_HT500Njet9_TuneCUETP8M2T4_13TeV-powheg-pythia8',
 'TTToSemiLeptonic_TuneCP5_PSweights_13TeV-powheg-pythia8',
-'TTToSemiLeptonic_TuneCP5_erdON_13TeV-powheg-pythia8',
-# 'TTToSemiLeptonic_TuneCP5down_PSweights_13TeV-powheg-pythia8',
-# 'TTToSemiLeptonic_TuneCP5up_PSweights_13TeV-powheg-pythia8',
-#'TTToSemiLeptonic_hdampDOWN_TuneCP5_PSweights_13TeV-powheg-pythia8',
-#'TTToSemiLeptonic_hdampUP_TuneCP5_PSweights_13TeV-powheg-pythia8',
-#'TTWH_TuneCP5_13TeV-madgraph-pythia8',
-#'TTWJetsToLNu_TuneCP5_PSweights_13TeV-amcatnloFXFX-madspin-pythia8',
-#'TTWW_TuneCP5_13TeV-madgraph-pythia8',
-#'TTWZ_TuneCP5_13TeV-madgraph-pythia8',
-#'TTZH_TuneCP5_13TeV-madgraph-pythia8',
-#'TTZToLLNuNu_M-10_TuneCP5_PSweights_13TeV-amcatnlo-pythia8',
-#'TTZToLL_M-1to10_TuneCP5_13TeV-amcatnlo-pythia8',
-#'TTZZ_TuneCP5_13TeV-madgraph-pythia8',
-# 'TT_Mtt-1000toInf_TuneCP5_PSweights_13TeV-powheg-pythia8',
-# 'TT_Mtt-700to1000_TuneCP5_PSweights_13TeV-powheg-pythia8',
-#'WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8',
-#'WJetsToLNu_HT-200To400_TuneCP5_13TeV-madgraphMLM-pythia8',
-#'WJetsToLNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8',
-#'WJetsToLNu_HT-400To600_TuneCP5_13TeV-madgraphMLM-pythia8',
-#'WJetsToLNu_HT-600To800_TuneCP5_13TeV-madgraphMLM-pythia8',
-#'WJetsToLNu_HT-800To1200_TuneCP5_13TeV-madgraphMLM-pythia8',
-#'WW_TuneCP5_13TeV-pythia8',
-#'WZ_TuneCP5_13TeV-pythia8',
-#'ZZ_TuneCP5_13TeV-pythia8',
-#'ttHToNonbb_M125_TuneCP5_13TeV-powheg-pythia8',
-#'ttHTobb_M125_TuneCP5_13TeV-powheg-pythia8',
+'TTTT_TuneCUETP8M2T4_PSweights_13TeV-amcatnlo-pythia8',
+'TT_TuneCUETP8M2T4_13TeV-powheg-pythia8',
+'TT_TuneCUETP8M2T4down_13TeV-powheg-pythia8',
+'TT_TuneCUETP8M2T4_GluonMoveCRTune_13TeV-powheg-pythia8',
+'TT_TuneCUETP8M2T4_GluonMoveCRTune_erdON_13TeV-powheg-pythia8',
+'TT_TuneCUETP8M2T4_PSweights_13TeV-powheg-pythia8',
+'TT_TuneCUETP8M2T4_QCDbasedCRTune_erdON_13TeV-powheg-pythia8',
+'TT_TuneCUETP8M2T4up_13TeV-powheg-pythia8',
+'TTTW_TuneCUETP8M2T4_13TeV-madgraph-pythia8',
+'TTWH_TuneCUETP8M2T4_13TeV-madgraph-pythia8',
+'TTWJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8',
+'TTWW_TuneCUETP8M2T4_13TeV-madgraph-pythia8',
+'TTWZ_TuneCUETP8M2T4_13TeV-madgraph-pythia8',
+'TTZH_TuneCUETP8M2T4_13TeV-madgraph-pythia8',
+'TTZToLL_M-1to10_TuneCUETP8M1_13TeV-madgraphMLM-pythia8',
+'TTZToLLNuNu_M-10_TuneCUETP8M1_13TeV-amcatnlo-pythia8',
+'TTZZ_TuneCUETP8M2T4_13TeV-madgraph-pythia8',
+'WJetsToLNu_HT-1200To2500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8',
+'WJetsToLNu_HT-200To400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8',
+'WJetsToLNu_HT-2500ToInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8',
+'WJetsToLNu_HT-400To600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8',
+'WJetsToLNu_HT-600To800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8',
+'WJetsToLNu_HT-800To1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8',
+'WW_TuneCUETP8M1_13TeV-pythia8',
+'WZ_TuneCUETP8M1_13TeV-pythia8',
+'ZZ_TuneCUETP8M1_13TeV-pythia8',
 ]
             
 for sample in dirList:
@@ -123,12 +142,17 @@ for sample in dirList:
         os.system('mkdir -p '+outDir+outsample)
         for shift in shifts: os.system('mkdir -p '+outDir.replace('nominal',shift)+outsample)
         os.system('mkdir -p '+condorDir+outsample)
-
+        print inDir
+        print sample
+        print finalStateYear
+        print inDir+'/'+sample+'/'+finalStateYear+'/'
+        print xrdClient.dirlist(inDir+'/'+sample+'/'+finalStateYear+'/')
         status, dirList = xrdClient.dirlist(inDir+'/'+sample+'/'+finalStateYear+'/')
         runlist = [item.name for item in dirList]
         print "Running",len(runlist),"crab directories"
 
         for run in runlist:
+            print inDir+'/'+sample+'/'+finalStateYear+'/'+run+'/'
             status, dirList = xrdClient.dirlist(inDir+'/'+sample+'/'+finalStateYear+'/'+run+'/')
             numlist = [item.name for item in dirList]
             
